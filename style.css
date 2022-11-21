@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --f1:'Montserrat', sans-serif;
+    --f2:'Fraunces', serif;
+
+
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;align-items: center;justify-content: center;
+}
+
+/* for-mobiles */
+@media (max-width:375px) {
+    .container{
+        width: 100%;height: 100%;border-radius: 10px;background-color: hsl(0, 0%, 100%);
+        margin: 5% 2%;
+        display:grid ;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(7,auto) ;
+        font-family: var(--f2);
+    }
+    img{
+        width: 100%;height: 100%;border-radius: 10px 10px 0 0;
+    }
+    h4{
+        margin: 15px 5%;font-family: var(--f1);color: hsl(228, 12%, 48%);
+        font-weight: 500;text-transform: uppercase;letter-spacing: 5px;
+    }
+    h1{
+        margin: 0 5% ;
+    }
+    p{
+        margin: 15px 5%;font-family: var(--f1);color: hsl(228, 12%, 48%);
+        font-weight: 500;
+    }
+    .price{margin: -10px 0;
+        display: flex;justify-content: flex-start;align-items: center;
+    }
+    h2,h6{
+        display: inline-block;margin-left: 20px ;
+    }
+    h2{color: hsl(158, 36%, 37%);}
+    h6{text-decoration: line-through;color: hsl(228, 12%, 48%);}
+    button{
+        width: 90%;height: 40px;background-color: hsl(158, 36%, 37%);
+        border: none;border-radius: 10px;margin: 8px 5%;margin-bottom: 20px;
+        color: whitesmoke;font-size: 16px;}
+    button::before{content: url(images/icon-cart.svg);}
+}
+@media (min-width:376px) and (max-width:1440px) {
+    .container{
+        width: 600px;;height: fit-content;border-radius: 10px;background-color: hsl(0, 0%, 100%);
+        margin: 25% auto;
+        display:grid ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:repeat(5,auto) ;
+        font-family: var(--f2);
+    }
+    img{content: url(images/image-product-desktop.jpg);
+        grid-area: 1/1/6/1;width:100% ;height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+    h4{
+        margin: 15px 5%;font-family: var(--f1);color: hsl(228, 12%, 48%);
+        font-weight: 500;text-transform: uppercase;letter-spacing: 5px;
+    }
+    h1{
+        margin: 0 5% ;
+    }
+    p{
+        margin: 15px 5%;font-family: var(--f1);color: hsl(228, 12%, 48%);
+        font-weight: 500;
+    }
+    .price{margin: -10px 0;
+        display: flex;justify-content: flex-start;align-items: center;
+    }
+    h2,h6{
+        display: inline-block;margin-left: 20px ;
+    }
+    h2{color: hsl(158, 36%, 37%);}
+    h6{text-decoration: line-through;color: hsl(228, 12%, 48%);}
+    button{
+        width: 90%;height: 40px;background-color: hsl(158, 36%, 37%);
+        border: none;border-radius: 10px;margin: 8px 5%;margin-bottom: 20px;
+        color: whitesmoke;font-size: 16px;}
+    button::before{content: url(images/icon-cart.svg);}
+    button:hover{
+        background-color:hsl(156, 25%, 30%) ;
+    }
+}
